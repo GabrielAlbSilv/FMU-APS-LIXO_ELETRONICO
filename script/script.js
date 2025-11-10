@@ -55,3 +55,23 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+/* =========================
+   MENU RESPONSIVO (HAMBÚRGUER)
+========================= */
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinksContainer = document.querySelector(".nav-links");
+
+// Alterna o menu ao clicar no ícone
+menuToggle.addEventListener("click", () => {
+    menuToggle.classList.toggle("active");
+    navLinksContainer.classList.toggle("open");
+});
+
+// Fecha o menu ao clicar em um link
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        menuToggle.classList.remove("active");
+        navLinksContainer.classList.remove("open");
+    });
+});
