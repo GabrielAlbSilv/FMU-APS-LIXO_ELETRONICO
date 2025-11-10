@@ -28,3 +28,30 @@ window.addEventListener('scroll', () => {
 
 // Adiciona classe CSS dinamicamente
 // (Os elementos com a classe "visible" podem ganhar efeitos de animação definidos no CSS)
+/* =========================
+   MENU FIXO E NAVEGAÇÃO SUAVE
+========================= */
+
+// Destacar o item ativo conforme o usuário rola
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+    let atual = "";
+
+    sections.forEach(sec => {
+        const top = window.scrollY;
+        const offset = sec.offsetTop - 120;
+        const height = sec.offsetHeight;
+        if (top >= offset && top < offset + height) {
+            atual = sec.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${atual}`) {
+            link.classList.add("active");
+        }
+    });
+});

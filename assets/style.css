@@ -127,3 +127,65 @@ section {
         flex-direction: column;
     }
 }
+
+/* Efeito de entrada suave conforme o usuário rola a página. */
+section, .card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+}
+
+section.visible, .card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   MENU FIXO DE NAVEGAÇÃO
+========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 4, 40, 0.9);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    padding: 1rem 1rem;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.logo {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00bfff;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #00bfff;
+    color: #00bfff;
+}
+
+
