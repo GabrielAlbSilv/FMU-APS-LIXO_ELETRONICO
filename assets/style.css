@@ -4,7 +4,7 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(180deg, #f0f4f8 0%, #d9e4ec 100%);
+    background: linear-gradient(180deg, #008F8C 0%, #023535 100%);
     color: #222;
     overflow-x: hidden;
 }
@@ -13,7 +13,7 @@ body {
 .header {
     text-align: center;
     padding: 3rem 1rem;
-    background: linear-gradient(135deg, #96aec4, #b3b7d4);
+    background: linear-gradient(135deg, #023535, #015958);
     color: #fff;
     animation: fadeIn 2s ease-in;
 }
@@ -37,6 +37,7 @@ section {
 
 /* Layout de introdução */
 .introducao {
+    background: #015958;
     margin-top: 1rem;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     display: flex;
@@ -70,7 +71,7 @@ section {
 
 .card {
     margin-bottom: 1rem;
-    background: #fff;
+    background: #57d4d2;
     border-radius: 1rem;
     padding: 1.5rem;
     width: 300px;
@@ -104,7 +105,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background: #0091ff;
+    background: #40d1cf;
     border-radius: 1rem;
 
 }
